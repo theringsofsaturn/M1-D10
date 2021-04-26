@@ -1,7 +1,7 @@
 // Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
 x = "John"
 y = "Doe"
-console.log("John <> Doe")
+console.log(`x <> y`)
 
 // Create an object with properties such name, surname, email
 let object = {
@@ -52,11 +52,11 @@ console.log(randomNumArr)
 // Create an array of arrays, in which every array has 10 random numbers
 
 let firstArray = [];
-for(let i = 0; i < 4; i++){
-     let secondArray = [];
-     for(let randomNum = 0; randomNum < 10; randomNum++)
-          secondArray.push(Math.floor(Math.random() * 10));
-     firstArray.push(secondArray);
+for (let i = 0; i < 4; i++) {
+    let secondArray = [];
+    for (let randomNum = 0; randomNum < 10; randomNum++)
+        secondArray.push(Math.floor(Math.random() * 10));
+    firstArray.push(secondArray);
 }
 console.log(firstArray)
 
@@ -70,31 +70,31 @@ var longest = arr.reduce(
 // Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
 
 // returns minimum and maximum values of an array
-function minMax (arr) {
-    return [ Math.min(...arr), Math.max(...arr) ]
-  }
-  
-  // sum numbers in a range
-  function sumRange (min, max) {
+function minMax(arr) {
+    return [Math.min(...arr), Math.max(...arr)]
+}
+
+// sum numbers in a range
+function sumRange(min, max) {
     let sum = 0
-  
+
     for (let i = min; i <= max; i++) {
-      sum += i
+        sum += i
     }
-  
+
     return sum
-  }
-  
-  function sumAll(arr) {
+}
+
+function sumAll(arr) {
     const [min, max] = minMax(arr)
     const sum = sumRange(min, max)
-  
+
     return sum
-  }
-  
-  // alternative one line solution
-  const sumAll = arr => sumRange(...minMax(arr))
-  
-  sumAll([1, 4])
+}
+
+// alternative one line solution
+const sumAll = arr => sumRange(...minMax(arr))
+
+sumAll([1, 4])
 
 
