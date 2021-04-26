@@ -52,7 +52,7 @@ console.log(randomNumArr)
 // Create an array of arrays, in which every array has 10 random numbers
 
 let firstArray = [];
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 10; i++) {
     let secondArray = [];
     for (let randomNum = 0; randomNum < 10; randomNum++)
         secondArray.push(Math.floor(Math.random() * 10));
